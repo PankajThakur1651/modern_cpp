@@ -23,9 +23,6 @@ public:
     }
 
     String &operator=(String const &rhs) {
-        if (this == &rhs) {
-            return *this;
-        }
         std::cout << "Copy Assignment operator \n";
         m_size = rhs.m_size;
         m_data = new char[m_size];
@@ -43,10 +40,13 @@ public:
 
     String &operator=(String &&rhs) noexcept {
         std::cout << "Move Assignment \n";
-        m_size = rhs.m_size;
-        m_data = rhs.m_data;
-        rhs.m_data = nullptr;
-        rhs.m_size = 0;
+        if (this != &rhs) {
+            delete m_data;
+            m_size = rhs.m_size;
+            m_data = rhs.m_data;
+            rhs.m_data = nullptr;
+            rhs.m_size = 0;
+        }
         return *this;
     }
 
