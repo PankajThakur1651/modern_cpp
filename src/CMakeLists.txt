@@ -1,1 +1,2 @@
 add_subdirectory(lvalue_rvalue)
+add_subdirectory(move_semantics)
