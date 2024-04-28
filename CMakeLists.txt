@@ -5,3 +5,4 @@ project(modern_cpp)
 set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(src)
+set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
