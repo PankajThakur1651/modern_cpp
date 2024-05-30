@@ -1,0 +1,2 @@
+add_subdirectory(structure_binding)
+add_subdirectory(nested_namespace)
