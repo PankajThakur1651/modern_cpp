@@ -5,7 +5,8 @@
 #include <memory>
 
 
-int main() {
+int main()
+{
 
 
 }

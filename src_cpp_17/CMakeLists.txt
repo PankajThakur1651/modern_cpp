@@ -1,2 +1,4 @@
+set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(structure_binding)
 add_subdirectory(nested_namespace)
+add_subdirectory(template_argument_deduction)
