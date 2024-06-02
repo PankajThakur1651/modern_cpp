@@ -6,17 +6,15 @@
 #define MODERN_CPP_TEMPLATE_ARGUMENT_DEDUCTION_H
 
 #include <iostream>
-using namespace  std;
-template<typename  T>
-class template_argument_deduction final {
+using namespace std;
+template <typename T> class template_argument_deduction final {
 public:
-     explicit template_argument_deduction( T fa);
+  explicit template_argument_deduction(T fa);
 
-     void display_all_member();
+  void display_all_member();
+
 private:
-     T first_argument;
+  T first_argument;
 };
 
-
-
-#endif //MODERN_CPP_TEMPLATE_ARGUMENT_DEDUCTION_H
+#endif // MODERN_CPP_TEMPLATE_ARGUMENT_DEDUCTION_H

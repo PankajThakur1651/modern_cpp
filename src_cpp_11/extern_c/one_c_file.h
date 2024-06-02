@@ -7,4 +7,4 @@
 #include <stdio.h>
 
 void func();
-#endif //EXTERN_C_ONE_C_FILE_H
+#endif // EXTERN_C_ONE_C_FILE_H

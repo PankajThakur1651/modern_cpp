@@ -1,8 +1,7 @@
 #include "template_argument_deduction.h"
 
-int main(){
+int main() {
 
-    template_argument_deduction tad(11);
-    tad.display_all_member();
-
+  template_argument_deduction tad(11);
+  tad.display_all_member();
 }

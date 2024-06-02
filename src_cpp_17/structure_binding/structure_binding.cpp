@@ -1,12 +1,7 @@
-#include <iostream>
-#include <tuple>
-#include <set>
 #include <cassert>
+#include <iostream>
 #include <memory>
+#include <set>
+#include <tuple>
 
-
-int main()
-{
-
-
-}
+int main() {}

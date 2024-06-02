@@ -5,3 +5,5 @@ mkdir -p build
 cd build
 cmake ..
 make install
+
+sudo apt install clang-format
