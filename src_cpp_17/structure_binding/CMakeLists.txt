@@ -1,4 +1,4 @@
-project(structure_binding)
+project(std)
 
 add_executable(structure_binding structure_binding.cpp)
 

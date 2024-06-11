@@ -3,7 +3,6 @@
 static int static_variable{};
 
 extern "C" {
-int local_variable{};
 #include "one_c_file.h"
 }
 
