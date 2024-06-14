@@ -4,7 +4,7 @@
 using namespace std;
 
 void in_cpp_14(std::vector<int> &vector_of_ints) {
-  auto const itr = std::find(vector_of_ints.begin(), vector_of_ints.end(), 3);
+  auto const itr = std::find(vector_of_ints.begin(), vector_of_ints.end(), 4);
 
   if (itr != vector_of_ints.end()) {
     *itr = 0x77; // decimal value of
@@ -12,10 +12,9 @@ void in_cpp_14(std::vector<int> &vector_of_ints) {
 }
 
 void in_cpp_17(std::vector<int> &vector_of_ints) {
-
-  if (auto itr = std::find(vector_of_ints.begin(), vector_of_ints.end(), 3);
+  if (auto const itr = std::find(vector_of_ints.begin(), vector_of_ints.end(), 3);
       itr != vector_of_ints.end()) {
-    *itr = 123;
+    *itr = 333;
   }
 }
 
@@ -28,7 +27,7 @@ void print_vector(std::string const &cpp_version, std::vector<int> const &vec) {
 }
 int main() {
   std::vector<int> vec_of_ints_for_cpp_17{1, 3, 5, 7, 9};
-  std::vector<int> vec_of_ints_for_cpp_14{1, 3, 5, 7, 9};
+  std::vector<int> vec_of_ints_for_cpp_14{2, 4, 6, 8, 10};
   in_cpp_14(vec_of_ints_for_cpp_14);
   in_cpp_17(vec_of_ints_for_cpp_17);
 
