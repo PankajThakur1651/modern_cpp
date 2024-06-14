@@ -12,7 +12,8 @@ void in_cpp_14(std::vector<int> &vector_of_ints) {
 }
 
 void in_cpp_17(std::vector<int> &vector_of_ints) {
-  if (auto const itr = std::find(vector_of_ints.begin(), vector_of_ints.end(), 3);
+  if (auto const itr =
+          std::find(vector_of_ints.begin(), vector_of_ints.end(), 3);
       itr != vector_of_ints.end()) {
     *itr = 333;
   }
