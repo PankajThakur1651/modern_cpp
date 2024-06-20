@@ -12,5 +12,5 @@ int main() {
   db.add_student(second_student);
   db.update_students_roll_number();
 
-  db.print_student_record();
+  db.print_students_record();
 }

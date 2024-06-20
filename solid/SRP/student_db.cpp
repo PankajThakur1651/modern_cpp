@@ -24,7 +24,7 @@ void Student_db::update_students_roll_number() {
   }
 }
 
-void Student_db::print_student_record() {
+void Student_db::print_students_record() {
   for (auto const &student : students_) {
     std::cout << "Roll number: " << student->getRollNumber()
               << ", Name: " << student->getName()

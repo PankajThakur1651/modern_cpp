@@ -17,7 +17,7 @@ public:
 
   void setStudents(const std::vector<std::shared_ptr<Student>> &students);
 
-  void print_student_record();
+  void print_students_record();
 
 private:
   std::vector<std::shared_ptr<Student>> students_;
