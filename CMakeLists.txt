@@ -5,6 +5,7 @@ set(CMAKE_INSTALL_PREFIX  ${CMAKE_SOURCE_DIR}/build/debug)
 set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
 add_subdirectory(src_cpp_11)
 add_subdirectory(src_cpp_17)
+add_subdirectory(solid)
 add_subdirectory(design_patterns)
 add_subdirectory(stl_algorithms)
 
