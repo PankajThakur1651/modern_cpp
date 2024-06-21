@@ -7,9 +7,9 @@ add_executable(isp isp.cpp
         scan.h
         fax.h
         xerox_work_center.cpp
-        Xerox_work_center.h
+        xerox_work_center.h
         printer_scanner.cpp
-        Printer_scanner.h
+        printer_scanner.h
         conan_printer.cpp
         conan_printer.h
         print.h

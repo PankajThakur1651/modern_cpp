@@ -7,7 +7,7 @@
 #include "print.h"
 #include "scan.h"
 
-class Printer_scanner : public Print, Scan {
+class printer_scanner : public Print, Scan {
 public:
   void print() override;
 

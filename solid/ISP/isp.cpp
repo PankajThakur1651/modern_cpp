@@ -1,5 +1,5 @@
-#include "Printer_scanner.h"
-#include "Xerox_work_center.h"
+#include "printer_scanner.h"
+#include "xerox_work_center.h"
 #include "conan_printer.h"
 #include <iostream>
 using namespace std;
@@ -13,7 +13,7 @@ using namespace std;
 //
 
 int main() {
-  Xerox_work_center xerox_work_center_obj;
+  xerox_work_center xerox_work_center_obj;
   xerox_work_center_obj.get_print_pools_detail();
   xerox_work_center_obj.scan();
 }

@@ -7,7 +7,7 @@
 #include "fax.h"
 #include "print.h"
 #include "scan.h"
-class Xerox_work_center : public Print, Scan, Fax {
+class xerox_work_center : public Print, Scan, Fax {
 public:
   void print() override;
 
