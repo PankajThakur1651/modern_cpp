@@ -1,6 +1,6 @@
+#include "conan_printer.h"
 #include "printer_scanner.h"
 #include "xerox_work_center.h"
-#include "conan_printer.h"
 #include <iostream>
 using namespace std;
 
