@@ -1,9 +1,13 @@
-# modern cpp features
-This project demonstrates the use of modern cpp features
-
+### Modern cpp features
+``` 
 mkdir -p build
 cd build
 cmake ..
 make install
+``` 
 
-sudo apt install clang-format
+### To format the code install clang format
+```
+ sudo apt install clang-format
+./clang_formatter.sh
+```

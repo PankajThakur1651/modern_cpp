@@ -2,8 +2,10 @@
 
 using namespace std;
 // A software component should be extendable to add a new feature or to add a
-// new behavior to it New feature getting added to the s/w component should NOT
-// have to modify existing code
+// new behavior to it
+
+// New feature getting added to the s/w component should NOT have to modify
+// existing code
 
 class Customer_profile {
 public:

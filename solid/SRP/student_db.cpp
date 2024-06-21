@@ -15,7 +15,7 @@ const std::vector<std::shared_ptr<Student>> &Student_db::getStudents() const {
 
 void Student_db::setStudents(
     const std::vector<std::shared_ptr<Student>> &students) {
-  students_ = students;
+  students_ = std::move(students);
 }
 
 void Student_db::update_students_roll_number() {
