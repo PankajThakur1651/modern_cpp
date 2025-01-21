@@ -58,10 +58,8 @@ void pipeline_of_view() {
 
 // using a pipeline to Modify elements
 
-auto non_empty_view = std::views::filter([](auto const &rg) {
-  std::cout << std::boolalpha << rg.empty() << std::endl;
-  return !rg.empty();
-});
+auto non_empty_view =
+    std::views::filter([](auto const &rg) { return !rg.empty(); });
 
 void pipeline_to_modify_elements() {
   std::vector<std::string> words{"tic", "tac", "toe", "", "ok"};
@@ -76,8 +74,8 @@ void pipeline_to_modify_elements() {
 
 // from cpp con https://www.youtube.com/watch?v=c1gfbbE2zts
 int main() {
-  //    about_views();
-  //    pipeline_of_range_adaptors();
+  // about_views();
+  // pipeline_of_range_adaptors();
 
   pipeline_of_view();
   pipeline_to_modify_elements();
