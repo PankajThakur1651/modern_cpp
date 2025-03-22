@@ -9,5 +9,6 @@ add_subdirectory(src_cpp_20)
 add_subdirectory(solid)
 add_subdirectory(design_patterns)
 add_subdirectory(stl_algorithms)
+add_subdirectory(multithreading)
 add_subdirectory(exercises)
 

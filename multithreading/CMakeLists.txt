@@ -1,0 +1,5 @@
+add_subdirectory(basic_threading)
+add_subdirectory(thread_Management)
+add_subdirectory(data_race_and_mutex)
+add_subdirectory(deadlock)
+add_subdirectory(unique_lock_and_lazy_initialization)
