@@ -2,6 +2,7 @@
 #include <string>
 #include <list>
 #include <memory>
+#include <vector>
 
 class Car {
 public:
@@ -24,6 +25,4 @@ public:
 
 int main() {
 
-    Car c;
-    c++;
 }

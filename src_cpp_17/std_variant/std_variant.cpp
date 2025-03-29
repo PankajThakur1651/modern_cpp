@@ -19,7 +19,7 @@ std::variant<int, double, std::string> get_value(T value) {
 // Application of std::variant
 // Handling Multiple Data Types:
 int main() {
-  // std::visit(lambda(), get_value(10));
+
 
   // Access the int
   if (holds_alternative<int>(get_value(12))) {
@@ -34,4 +34,5 @@ int main() {
   if (holds_alternative<string>(get_value("Pankaj"))) {
     cout << get<string>(get_value("Thakur")) << endl;
   }
+    std::visit(lambda(), get_value(10));
 }
