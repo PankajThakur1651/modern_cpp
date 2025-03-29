@@ -16,9 +16,7 @@ public:
     }
 
     void display() {
-        for (int i = 0; i < size_; i++) {
-            std::cout << array_[i] << std::endl;
-        }
+        //std::cout<<"Display \n";
     }
 
     Pan_vector(Pan_vector const &obj) {
@@ -51,26 +49,26 @@ Pan_vector CreatePanVector() {
     return Pan_vector(11);
 }
 
+void foo(Pan_vector &pv) {
+    std::cout << "foo&" << std::endl;
+    pv.display();
+}
 
-namespace user_defined_literals {
-    long double operator "" _cm(long double x) {
-        return x * 10;
-    }
+void foo(Pan_vector &&pv) {
+    std::cout << "foo &&" << std::endl;
+    pv.display();
+}
 
-    long double operator "" _m(long double x) {
-        return x * 1000;
-    }
-
-    void about_literals() {
-        long double height = 3.4_cm;
-        std::cout << "Height is: " << height << std::endl;
-    }
+template<typename T>
+void relay(T &&a) {
+    std::cout << "Relay" << std::endl;
+    foo(std::forward<T>(a));
 }
 
 int main() {
     auto vec = CreatePanVector();
-    Pan_vector b = std::move(vec); // Vec becomes unusable here
-    user_defined_literals::about_literals();
+    relay(vec);
+    relay(CreatePanVector());
 }
 
 
