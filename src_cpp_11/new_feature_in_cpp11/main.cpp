@@ -124,10 +124,7 @@ int main() {
     // String literals
 
     std::vector<int> vec_of_ints{1, 2, 3, 4, 5};
-    int value =4;
-    lambda_function_in_cpp::filter([&value](int x) {
+    lambda_function_in_cpp::filter([](int x) {
         return x % 2 == 0;
     }, vec_of_ints);
-
-
 }

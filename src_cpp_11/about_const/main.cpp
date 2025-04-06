@@ -4,7 +4,7 @@
 
 void const_basics() {
     int const value =9;
-    int const* ptr_1 = &value; // data is const , ptr_1 is not
+   [[maybe_unused]] int const* ptr_1 = &value; // data is const , ptr_1 is not
 
 
     ptr_1++;
