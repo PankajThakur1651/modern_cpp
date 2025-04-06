@@ -1,4 +1,4 @@
 add_subdirectory(reinterpret_cast)
 add_subdirectory(casting)
 add_subdirectory(overload)
-add_subdirectory(exercise)
+add_subdirectory(extern_c)

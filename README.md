@@ -11,3 +11,10 @@ make install
  sudo apt install clang-format
 ./clang_formatter.sh
 ```
+
+
+### Pick clang-17 compiler, instead of default gcc 
+```
+ export CC=clang-17
+ export CXX=clang++-17
+```

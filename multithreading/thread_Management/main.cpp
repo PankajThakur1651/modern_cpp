@@ -15,6 +15,7 @@ void function()
 {
     for (int i =0;i>-100;i--)
     {
+        std::lock_guard<std::mutex> l(mu_);
         std::cout<<"From t1: "<<i <<std::endl;
     }
 }
