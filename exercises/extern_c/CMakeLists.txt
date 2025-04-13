@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.21)
 
 project(extern_c)
 
-set(CMAKE_CXX_STANDARD 17)
 
 add_library(func_lib
         one_c_file.h

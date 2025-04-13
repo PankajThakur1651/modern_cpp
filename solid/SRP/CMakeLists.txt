@@ -1,7 +1,4 @@
 project(srp)
-
-set(CMAKE_CXX_STANDARD 17)
-
 add_executable(srp srp.cpp
         student.cpp
         student.h

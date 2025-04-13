@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 project(modern_cpp)
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_INSTALL_PREFIX  ${CMAKE_SOURCE_DIR}/build/debug)
+set(CMAKE_INSTALL_PREFIX  ${CMAKE_SOURCE_DIR}/build/)
 set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
 add_subdirectory(src_cpp_11)
 add_subdirectory(src_cpp_14)

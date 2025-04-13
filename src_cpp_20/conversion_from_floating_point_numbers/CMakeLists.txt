@@ -1,0 +1,3 @@
+project(conversion_from_floating_point_numbers)
+add_executable(conversion_from_floating_point_numbers main.cpp)
+target_compile_options(conversion_from_floating_point_numbers PRIVATE -Werror -Wall -Wextra)
