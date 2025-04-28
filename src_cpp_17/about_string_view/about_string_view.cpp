@@ -9,4 +9,12 @@ int main() {
     str[0] = 'X';
     std::cout << "String: " << str << '\n';
     std::cout << "String View: " << sv << '\n'; // sv sees the modified string
+
+    sv = "Thakur";
+
+    std::cout<<"string view str is "<<sv <<std::endl;
+
+    std::cout << "String: " << str << '\n';
+    std::cout << "String View: " << sv << '\n'; // sv sees the modified string
+
 }
