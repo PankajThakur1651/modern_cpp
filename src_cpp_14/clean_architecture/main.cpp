@@ -2,7 +2,6 @@
 #include <memory>
 #include <string>
 
-
 // interfaces (IDataBase)
 class IDataBase {
 public:

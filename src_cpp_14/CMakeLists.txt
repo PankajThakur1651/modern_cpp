@@ -1,5 +1,4 @@
-set(CMAKE_CXX_STANDARD 14)
-add_subdirectory(UniquePtr)
+set(CMAKE_CXX_STANDARD 20)
+add_subdirectory(cpp14_features)
 add_subdirectory(cpp_templates)
-
 add_subdirectory(clean_architecture)
