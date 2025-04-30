@@ -30,7 +30,8 @@ void copy_map() {
     std::map<int, int> map_1{{1,2},{3,4}};
     std::map<int, int> map_2{{5,6},{7,8}};
 
-    std::copy(map_1.begin(), map_1.end(), std::inserter(map_2, map_2.end()));
+//    std::copy(map_1.begin(), map_1.end(), std::inserter(map_2, map_2.end()));
+    map_2.insert(map_1.begin(), map_1.end());
     std::cout << "Elements in Vec2: " << std::endl;
     for (auto const &value: map_2) {
         std::cout << value.first << " ";
