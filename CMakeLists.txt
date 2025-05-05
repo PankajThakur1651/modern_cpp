@@ -12,4 +12,4 @@ add_subdirectory(solid)
 add_subdirectory(design_patterns)
 add_subdirectory(stl_algorithms)
 add_subdirectory(multithreading)
-
+add_subdirectory(cpp_linkings)

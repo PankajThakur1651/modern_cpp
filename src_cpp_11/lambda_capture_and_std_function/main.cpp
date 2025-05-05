@@ -18,11 +18,41 @@ int lambda_with_capture_list(int &x) {
 }
 
 
+int add(int a , int b)
+{
+    return a+b;
+}
+
+class Test
+{
+public:
+    Test() = default;
+    void greet(int x)
+    {
+        x_+=x;
+
+        std::cout<<"Greet is called \n";
+    }
+    int x_;
+};
+void std_bind_usage(){
+    auto sum = std::bind (add, 10, std::placeholders::_1);
+    std::cout<< sum(12) <<std::endl;
+
+    Test t;
+    auto value = std::bind (&Test::greet, &t, 1);
+    value();
+
+
+
+}
 int main() {
     int x = 10;
     std::cout << lambda_with_capture_list(x) <<std::endl;
     std::cout << lambda_with_capture_list(x) <<std::endl;
     std::cout << lambda_with_capture_list(x) <<std::endl;
+    std_bind_usage();
+
 }
 
 
