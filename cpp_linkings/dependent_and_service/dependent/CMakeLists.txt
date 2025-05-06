@@ -9,7 +9,7 @@ message("CMAKE_SOURCE_DIR is ${CMAKE_SOURCE_DIR}")
 target_include_directories(
         dependent
         PRIVATE
-        ${CMAKE_SOURCE_DIR}/cpp_linkings/service
+        ${CMAKE_SOURCE_DIR}/cpp_linkings/dependent_and_service/service
 
 )
 target_link_libraries(
