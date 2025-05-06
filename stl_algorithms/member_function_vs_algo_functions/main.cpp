@@ -1,22 +1,21 @@
 #include <algorithm>
-#include <unordered_set>
 #include <iostream>
+#include <unordered_set>
 
 using namespace std;
 
 int main() {
-    std::unordered_set<int> uset{12, 1, 2, 3, 6, 8};
+  std::unordered_set<int> uset{12, 1, 2, 3, 6, 8};
 
-    auto itr = uset.find(3);  // O(1)
+  auto itr = uset.find(3); // O(1)
 
-    if (itr != uset.end()) {
-        std::cout << "Element found" << std::endl;
-    }
+  if (itr != uset.end()) {
+    std::cout << "Element found" << std::endl;
+  }
 
+  itr = find(uset.begin(), uset.end(), 4);
 
-    itr = find(uset.begin(), uset.end(), 4);
-
-    if (itr != uset.end()) {
-        std::cout << "Element found" << std::endl; // O(n)
-    }
+  if (itr != uset.end()) {
+    std::cout << "Element found" << std::endl; // O(n)
+  }
 }

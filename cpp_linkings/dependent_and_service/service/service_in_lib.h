@@ -5,17 +5,15 @@
 #ifndef MODERN_CPP_SERVICE_IN_LIB_H
 #define MODERN_CPP_SERVICE_IN_LIB_H
 
-
 class Service_in_lib {
 
 private:
-    int first_variable {};
+  int first_variable{};
 
 public:
-    Service_in_lib() = default;
+  Service_in_lib() = default;
 
-    int sum (int x ,int y);
+  int sum(int x, int y);
 };
 
-
-#endif //MODERN_CPP_SERVICE_IN_LIB_H
+#endif // MODERN_CPP_SERVICE_IN_LIB_H

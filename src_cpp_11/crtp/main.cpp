@@ -1,36 +1,28 @@
 #include <iostream>
 
-template<class Derived> // 1
+template <class Derived> // 1
 class Animal {
 public:
-    Animal()=default;
-    ~Animal()=default;
-    friend Derived;
+  Animal() = default;
+  ~Animal() = default;
+  friend Derived;
 
 public:
-    void make_sound() {
-        static_cast<Derived &>(*this).make_sound();
-    }
+  void make_sound() { static_cast<Derived &>(*this).make_sound(); }
 };
 
-class Sheep : public Animal<Sheep> { //2
+class Sheep : public Animal<Sheep> { // 2
 public:
-    void make_sound() {
-        std::cout << "baa" << std::endl;
-    }
+  void make_sound() { std::cout << "baa" << std::endl; }
 };
 
-class Dog : public Animal<Dog> { //3
+class Dog : public Animal<Dog> { // 3
 public:
-    void make_sound() {
-        std::cout << "Bow Bow..." << std::endl;
-    }
+  void make_sound() { std::cout << "Bow Bow..." << std::endl; }
 };
 
-template <typename Derived>
-void print(Animal<Derived> & animal)
-{
-    animal.make_sound();
+template <typename Derived> void print(Animal<Derived> &animal) {
+  animal.make_sound();
 }
 
 /*
@@ -40,10 +32,10 @@ void print(Animal<Derived> & animal)
  * 2. Everything is a template
  */
 int main() {
-    Animal<Sheep> sheep;
-    print(sheep);
+  Animal<Sheep> sheep;
+  print(sheep);
 
-    Animal<Dog> dog;
-    print(dog);
-    return 0;
+  Animal<Dog> dog;
+  print(dog);
+  return 0;
 }

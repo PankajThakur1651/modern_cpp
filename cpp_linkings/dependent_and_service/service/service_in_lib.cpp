@@ -4,7 +4,4 @@
 
 #include "service_in_lib.h"
 
-int Service_in_lib::sum(int x, int y) {
-
-    return x+y;
-}
+int Service_in_lib::sum(int x, int y) { return x + y; }

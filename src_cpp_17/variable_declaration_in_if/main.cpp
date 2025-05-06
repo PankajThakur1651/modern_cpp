@@ -27,15 +27,14 @@ void print_vector(std::string const &cpp_version, std::vector<int> const &vec) {
   std::cout << std::endl;
 }
 
-void start_simple()
-{
-    std::vector<int> vec{1, 2, 3};
-    if (auto  n = vec.size();n !=0) // Variable declaration in if
-    {
-
-    }
+void start_simple() {
+  std::vector<int> vec{1, 2, 3};
+  if (auto n = vec.size(); n != 0) // Variable declaration in if
+  {
+  }
 }
-int main() {start_simple();
+int main() {
+  start_simple();
   std::vector<int> vec_of_ints_for_cpp_17{1, 3, 5, 7, 9};
   std::vector<int> vec_of_ints_for_cpp_14{2, 4, 6, 8, 10};
   in_cpp_14(vec_of_ints_for_cpp_14);
@@ -43,6 +42,4 @@ int main() {start_simple();
 
   print_vector("C++14", vec_of_ints_for_cpp_14);
   print_vector("C++17", vec_of_ints_for_cpp_17);
-
-
 }
