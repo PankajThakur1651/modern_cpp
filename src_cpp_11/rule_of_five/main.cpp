@@ -54,6 +54,13 @@ void Rule_of_five::print_ptr() { std::cout << "ptr is: " << ptr_ << std::endl; }
 
 auto Rule_of_five::get_ptr() { return ptr_; }
 
+// copy constructor
+// Assignment : check for self assignment - if both objects are not equal delete
+// ptr_ and then new one assign value to it
+// assign the value and then set the right side to nullptr
+// Move assignment: check for the same object , if not same then first delete
+// the ptr_, assign the ptr to LHS and then set this pointer to nullptr
+
 int main() {
 
   Rule_of_five real_object(11);

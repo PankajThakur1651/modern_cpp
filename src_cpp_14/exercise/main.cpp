@@ -1,63 +1,26 @@
 #include <iostream>
-#include <vector>
+#include <memory>
 
-class Rule_of_five {
+class B; // Forward declaration
+
+class A {
 public:
-  explicit Rule_of_five(int value) : ptr_(new int(value)) {}
-
-  Rule_of_five(Rule_of_five const &obj) {
-
-    ptr_ = new int;
-    *ptr_ = *obj.ptr_;
-  }
-
-  Rule_of_five &operator=(Rule_of_five const &obj) {
-    if (this != &obj) {
-      delete ptr_;
-      ptr_ = new int(*obj.ptr_);
-    }
-    return *this;
-  }
-
-  Rule_of_five(Rule_of_five &&obj) noexcept {
-    ptr_ = obj.ptr_;
-    obj.ptr_ = nullptr;
-  }
-
-  Rule_of_five &operator=(Rule_of_five &&obj) noexcept;
-
-  ~Rule_of_five() {
-    std::cout << "Deleted Now ..." << std::endl;
-    delete ptr_;
-
-    ptr_ = nullptr;
-  }
-
-  void print_ptr();
-
-  auto get_ptr();
-
-private:
-  int *ptr_;
+    std::shared_ptr<B> b_ptr;
+    ~A() { std::cout << "A destroyed\n"; }
 };
 
-Rule_of_five &Rule_of_five::operator=(Rule_of_five &&obj) noexcept {
-  if (this != &obj) {
-    delete ptr_;
-    ptr_ = obj.ptr_;
-    obj.ptr_ = nullptr;
-  }
-  return *this;
-}
-
-void Rule_of_five::print_ptr() { std::cout << "ptr is: " << ptr_ << std::endl; }
-
-auto Rule_of_five::get_ptr() { return ptr_; }
+class B {
+public:
+    std::weak_ptr<A> a_ptr;  // Use weak_ptr to avoid cycle
+    ~B() { std::cout << "B destroyed\n"; }
+};
 
 int main() {
+    std::shared_ptr<A> a = std::make_shared<A>();
+    std::shared_ptr<B> b = std::make_shared<B>();
 
-  Rule_of_five real_object(11);
-  auto first_copy = real_object;
-  Rule_of_five real_object_2(11);
-  real_object_2 = real_object;
+    a->b_ptr = b;
+    b->a_ptr = a;  // No cycle since a_ptr is weak
+
+    return 0;
 }
