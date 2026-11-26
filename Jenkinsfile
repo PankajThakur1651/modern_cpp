@@ -20,7 +20,6 @@ pipeline {
 
         stage('clean build') {
             steps {
-                sh 'echo "Pwd is ===>$(pwd)"'
                 sh 'rm -rf build'
             }
         }
