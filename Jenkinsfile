@@ -1,33 +1,28 @@
-pipeline
-{
+pipeline {
     agent any
     stages {
-
-        stage("build"){
-            steps
-            {
-                    mkdir build
+        stage("build") {
+            steps {
+                sh '''
+                    pwd
+                    mkdir -p build
                     cd build
-                    cmake..
+                    cmake ..
                     make
+                '''
+            }
+        }
+        stage("test") {
+            steps {
+                sh 'ctest --test-dir build --output-on-failure --no-tests=error'
             }
         }
 
-        stage("test"){
-            steps
-            {
-                
+        stage('clean build') {
+            steps {
+                sh 'echo "Pwd is ===>$(pwd)"'
+                sh 'rm -rf build'
             }
         }
-
-        stage("deploy"){
-            steps
-            {
-                
-            }
-        }
-
-
     }
-
 }

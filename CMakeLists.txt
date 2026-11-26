@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 project(modern_cpp)
+include(CTest)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_INSTALL_PREFIX  ${CMAKE_SOURCE_DIR}/build/)
 set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
